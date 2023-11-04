@@ -1,5 +1,3 @@
-FROM nginx:latest
-WORKDIR /var/www/html/index.html
-COPY ./index /var/www/html/index.html
+FROM httpd
 
-EXPOSE 8000
+COPY . /usr/local/apache2/htdocs/
