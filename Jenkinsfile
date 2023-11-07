@@ -13,6 +13,7 @@ pipeline{
             steps {
                 echo "Building the code"
                 sh "docker build -t web-app ."
+                emailext body: 'java code build', subject: 'java code build', to: 'darshanchavan599@gmail.com'
             }    
             
         }
