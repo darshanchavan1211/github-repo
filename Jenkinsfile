@@ -32,7 +32,7 @@ pipeline{
         }
         stage("Deploy"){
             steps {
-                sh "docker run -d -p 80:80 --rm --name myDemoContainer 356417641411.dkr.ecr.ap-south-1.amazonaws.com/testing-repo:latest"
+                sh "docker run -d -p 80:80 356417641411.dkr.ecr.ap-south-1.amazonaws.com/testing-repo:latest"
                
             }   
             
