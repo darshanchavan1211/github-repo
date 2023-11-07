@@ -21,7 +21,7 @@ pipeline{
             steps {
                 script {
                     sh "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 356417641411.dkr.ecr.ap-south-1.amazonaws.com"
-                    sh "aws ecr create-repository --repository-name java-app --region ap-south-1"
+                    sh "aws ecr create-repository --repository-name web-app --region ap-south-1"
                     sh "docker tag web-app:latest 356417641411.dkr.ecr.ap-south-1.amazonaws.com/web-app:latest"
                     sh "docker push 356417641411.dkr.ecr.ap-south-1.amazonaws.com/web-app:latest"
                 }
